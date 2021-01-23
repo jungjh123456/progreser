@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": "jungj123@naver.com",
+      "name": "정지훈",
+      "pass": "wjdwlgns",
+      "birth": "정지훈",
+      "routines": []
+    },
+    {
+      "id": "progreser@gmail.com",
+      "name": "프로그래서",
+      "pass": "123456789",
+      "birth": "210122",
+      "routine": [],
+      "routines": [
+        {
+          "id": 1611303418215,
+          "routine": "코딩하기 - 리액트",
+          "day": ["금"],
+          "alram": true,
+          "startTime": "08:00",
+          "endTime": "09:00",
+          "frequency": "1분단위로 3번 울리기",
+          "alarmSound": "bell"
+        },
+        {
+          "id": 1611304434211,
+          "routine": "산책하기",
+          "day": ["토"],
+          "alram": false,
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "frequency": "1분단위로 3번 울리기",
+          "alarmSound": "bell"
+        },
+        {
+          "id": 1611305091032,
+          "routine": "물 먹기",
+          "day": ["일", "월", "화", "수", "목", "금", "토"],
+          "alram": false,
+          "startTime": "09:00",
+          "endTime": "09:01",
+          "frequency": false,
+          "alarmSound": "knock"
+        }
+      ]
+    }
+  ]
+}

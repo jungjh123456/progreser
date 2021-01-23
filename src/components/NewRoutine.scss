@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+.NewRoutine {
+  position: relative;
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  min-height: 812px;
+  max-height: 812px;
+
+  h1 {
+    border-bottom: 2px solid #37b24d;
+    font-family: 'Russo One', sans-serif;
+  }
+
+  input[name='routine'] {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #f1f3f5;
+    font-weight: bold;
+    color: #ced4da;
+    font-size: 1.125rem;
+  }
+  .ant-checkbox-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    box-sizing: border-box;
+  }
+
+  .ant-checkbox-group span {
+    background-color: #343a40;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  .ant-checkbox {
+    display: none;
+  }
+  .ant-checkbox-wrapper-checked span {
+    background-color: #d6d6d6;
+    color: #000;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 1rem 0;
+
+    li {
+      list-style: none;
+      background-color: #343a40;
+      padding: 0.5rem;
+      border-radius: 20px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  h2 {
+    color: #ced4da;
+    padding: 0;
+    margin: 0.5rem 0;
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+
+  .theme {
+    display: flex;
+    width: 100%;
+    color: #495057;
+    font-weight: bold;
+    font-size: 1.125rem;
+    padding: 1rem;
+    background-color: #f1f3f5;
+    height: 50px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    align-items: center;
+    span {
+      color: #adb5bd;
+      display: flex;
+      align-items: center;
+      .ant-row {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background: none;
+        border-bottom: 1px solid;
+      }
+    }
+
+    .time {
+      display: flex;
+      flex: 1;
+    }
+    .ant-picker {
+      border: none;
+      background: #f1f3f5;
+      width: 120px;
+    }
+    .ant-picker {
+      border: none;
+      background: #f1f3f5;
+      width: 120px;
+    }
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    .frequency {
+      display: flex;
+      flex: 1;
+    }
+
+    .toggle {
+      display: flex;
+      flex: 1;
+
+      .active {
+        display: flex;
+        flex: 1;
+      }
+
+      .box {
+        display: flex;
+        width: 60px;
+        background-color: red;
+        border-radius: 20px;
+      }
+    }
+  }
+  .button-wrap {
+    display: flex;
+    justify-content: space-between;
+    min-width: 345px;
+    box-sizing: border-box;
+    padding-top: 50px;
+
+    .button {
+      width: 45%;
+      font-size: 1rem;
+      box-sizing: border-box;
+      font-weight: bold;
+      border-radius: 50px;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      border: 2px solid #adb5bd;
+      box-shadow: 0px 0px 5px #dee2e6;
+      transition: all 0.3s;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.menu-btn {
+  display: block;
+  background-color: rgb(255, 255, 255);
+  border: 0;
+}
+
+audio {
+  opacity: 0;
+}

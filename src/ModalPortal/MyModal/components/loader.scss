@@ -1,0 +1,48 @@
+.loading {
+  overflow: hidden;
+  // border-radius: 50%;
+  display: flex;
+  width: 15px;
+  height: 15px;
+  
+  div {
+    display: inline-block;
+    background-color: red;
+    width: 30px;  
+    height: 10px;
+    
+    &:nth-child(1) {
+      background-color: blue;
+      background-image: linear-gradient(rgba(0,0,0,0.9) 10%, #eee );
+      // transform: translateX(10px);
+      animation: move 1s linear infinite;
+    }
+    &:nth-child(2) {
+      width: 45px;
+      height: 45px;
+      background-color: rgba(0,0,0,0.8);
+      position: absolute;
+    }
+    
+  }
+}
+
+@keyframes move {
+  0%, 100%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(45deg);
+    // transform: translateY(90%);
+  }
+  50% {
+    transform: rotate(90deg);
+    // transform: translateY(50%);
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

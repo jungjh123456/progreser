@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+.Routine {
+  background-color: #f8f9fa;
+  font-family: 'Roboto', sans-serif;
+  padding: 30px 10px;
+  overflow-y: hidden;
+  // background-color: #f8f9fa;
+  // min-height: 812px;
+  // max-height: 812px;
+  box-sizing: border-box;
+  background-color: #fff;
+  .header {
+    font-weight: 900;
+    position: relative;
+    time {
+      font-size: 1.5rem;
+      color: #adb5bd;
+      margin-left: 3%;
+    }
+    h1 {
+      padding-top: 5%;
+      max-height: 110px;
+      overflow: hidden;
+      animation: typingAni 1.2s steps(10, end);
+
+      p {
+        position: relative;
+        margin: 0;
+        font-size: 1.3rem;
+        color: #212529;
+        font-weight: 900;
+        width: 355px;
+        padding-left: 3px;
+      }
+    }
+    @keyframes typingAni {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+    color: #868e96;
+    .logoutbtn {
+      position: absolute;
+      top: 0px;
+      right: 10px;
+      button {
+        padding: 5px;
+        border: 0;
+        font-weight: bold;
+        background: none;
+        transition: 0.3s;
+        border-radius: 5px 5px;
+        box-sizing: border-box;
+        cursor: pointer;
+        &:hover {
+          box-sizing: border-box;
+          background-color: #adb5bd;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .section {
+    padding: 0;
+    min-height: 380px;
+    margin-top: 30px;
+    .Routine-list {
+      &:nth-child(even) {
+        background-color: #f3f5fc;
+        //border: 1px solid #f7c0f6;
+      }
+      padding: 30px 20px;
+      list-style: none;
+      position: relative;
+      color: #000;
+      font-weight: 600;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      background-color: #f9fafc;
+      form {
+        display: none;
+        button {
+          font-size: 12px;
+          transform: translate(-90%, 11px);
+          background-color: #c5c5c5;
+          border-radius: 10px;
+        }
+      }
+      p {
+        display: none;
+      }
+      p.show {
+        display: block;
+      }
+      form.show {
+        display: block;
+      }
+      .Routine-btn {
+        transition: all 0.5s;
+        opacity: 0;
+      }
+      .Routine-btn.show {
+        opacity: 1;
+      }
+      time {
+        letter-spacing: 0;
+        display: block;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        font-weight: 800;
+        color: rgba(0, 0, 0, 0.2);
+      }
+      button {
+        position: absolute;
+        top: 30px;
+        right: 10px;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        svg {
+          font-size: 25px;
+        }
+      }
+      .Routine-btn {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+      }
+      .Routine-btn li:first-child button {
+        border-right: 1px solid #999;
+      }
+      .Routine-btn button {
+        font-size: 12px;
+        position: static;
+        background-color: #f8f9fa;
+      }
+    }
+  }
+  .plus {
+    text-align: right;
+    button {
+      border: 0;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      border-radius: 50%;
+      background: rgb(255, 255, 255);
+      box-shadow: 0 1px 3px #adb5bd, 0 2px 3px #adb5bd;
+      cursor: pointer;
+      margin-right: 8%;
+      margin-bottom: 10%;
+      text-align: center;
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 3rem;
+        border: 0;
+        color: #adb5bd;
+      }
+    }
+  }
+
+  .navigation {
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      border-top: 1px solid #adb5bd;
+      list-style: none;
+
+      justify-content: center;
+
+      li {
+        width: 100%;
+
+        button {
+          display: flex;
+          width: 100%;
+          // background-color: #000;
+          background: none;
+          justify-content: center;
+          border: 0;
+          cursor: pointer;
+          svg {
+            color: #adb5bd;
+            padding: 10px 25%;
+            font-size: 2rem;
+            &:hover {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

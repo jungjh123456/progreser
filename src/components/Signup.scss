@@ -1,0 +1,88 @@
+.Signup {
+  padding: 10px;
+  h1 {
+    margin-bottom: 5px;
+    margin-left: -5px;
+  }
+  p {
+    margin: 8px 0 20px;
+    color: #a8a8a8;
+  }
+  div {
+    margin-bottom: 20px;
+    position: relative;
+    label {
+      display: block;
+      padding-bottom: 5px;
+      span {
+        color: red;
+      }
+    }
+    
+    input:not([type='checkbox']) {
+      width: 100%;
+      height: 40px;
+      border: 1px solid rgb(204, 204, 204);
+      box-sizing: border-box;
+      border-radius: 5px;
+      padding-left: 14px;
+      outline: none;
+    }
+    button:not([type='submit']) {
+      position: absolute;
+      right: 0;
+      height: 40px;
+      border: 0;
+      border-left: 1px solid #a8a8a8;
+      cursor: pointer;
+      background: none;
+    }
+    li {
+      display: inline-block;
+    }
+  }
+
+  .user-pass {
+      color: red;
+  }
+
+  .gender-list li {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #5ce1e6;
+    color: #fff;
+    margin-right: 5px;
+    font-weight: 700;
+  }
+  .check-div {
+    margin: 20px 0;
+  }
+  .check-div * {
+    vertical-align: middle;
+  }
+  .check-div input {
+    margin: 0;
+  }
+  .check-div span {
+    padding-left: 8px;
+    font-size: 13px;
+  }
+  button[type='submit'] {
+    display: block;
+    width: 100%;
+    height: 46px;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #5ce1e6;
+    color: #fff;
+    border: none;
+    &:not([disabled]){
+    
+    } 
+    
+    &:disabled {
+      background-color: #a8a8a8;
+    }
+    
+  }
+}
