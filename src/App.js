@@ -35,21 +35,6 @@ sagaMiddleware.run(rootSaga);
 const persistor = persistStore(store);
 
 function App() {
-<<<<<<< HEAD
-	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Edit <code>src/App.js</code> and save to reload.11
-				</p>
-				<a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-					Learn React
-				</a>
-			</header>
-		</div>
-	);
-=======
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
@@ -67,7 +52,6 @@ function App() {
       </PersistGate>
     </Provider>
   );
->>>>>>> develop
 }
 
 export default App;
