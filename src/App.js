@@ -15,7 +15,10 @@ import persistReducer from '../node_modules/redux-persist/es/persistReducer';
 import persistStore from '../node_modules/redux-persist/es/persistStore';
 import { PersistGate } from 'redux-persist/integration/react';
 import MyModal from './ModalPortal/MyModal/MyModal';
-import RoutineContainer from './containers/RoutineContainer';
+import RoutineContainer from './containers/MobxRoutineContainer';
+import { Provider as MoxProvider } from 'mobx-react';
+import RoutineStore from './mobx/RoutineStore';
+import MobxnewRoutineContainer from './containers/MobxnewRoutineContainer';
 
 const history = createBrowserHistory();
 const sagaMiddleware = createSagaMiddleware();
@@ -26,6 +29,7 @@ const persistConfig = {
   whitelist: ['userInfo', 'signinfo', 'newRoutine', 'getRoutine'],
 };
 const enhancedReducer = persistReducer(persistConfig, rootReducer(history));
+const RoutineStores = new RoutineStore();
 const store = createStore(
   enhancedReducer,
   composeWithDevTools(applyMiddleware(routerMiddleware(history), sagaMiddleware)),
@@ -36,21 +40,23 @@ const persistor = persistStore(store);
 
 function App() {
   return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <div className="App">
-          <ConnectedRouter history={history}>
-            <Switch>
-              <Route path="/login" component={LoginContainer} />
-              <Route path="/newroutine" component={NewRoutineContainer} />
-              <Route path="/signup" component={SignContainer} />
-              <Route path="/" exact component={RoutineContainer} />
-            </Switch>
-          </ConnectedRouter>
-        </div>
-        {/* <MyModal /> */}
-      </PersistGate>
-    </Provider>
+    <MoxProvider RoutineStore={RoutineStores}>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <div className="App">
+            <ConnectedRouter history={history}>
+              <Switch>
+                <Route path="/login" component={LoginContainer} />
+                <Route path="/newroutine" component={MobxnewRoutineContainer} />
+                <Route path="/signup" component={SignContainer} />
+                <Route path="/" exact component={RoutineContainer} />
+              </Switch>
+            </ConnectedRouter>
+          </div>
+          {/* <MyModal /> */}
+        </PersistGate>
+      </Provider>
+    </MoxProvider>
   );
 }
 

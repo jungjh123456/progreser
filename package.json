@@ -12,6 +12,8 @@
     "connected-react-router": "^6.8.0",
     "date-and-time": "^0.14.2",
     "json-server": "^0.16.3",
+    "mobx": "^6.0.4",
+    "mobx-react": "^7.0.5",
     "moment": "^2.29.1",
     "node-sass": "^4.14.1",
     "prettier": "^2.2.1",
@@ -33,9 +35,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "server": "json-server --watch --port 3001 db.json",
     "dev": "concurrently \"npm start\" \"npm run server\"",
     "eject": "react-scripts eject"
@@ -60,8 +62,10 @@
     ]
   },
   "devDependencies": {
+    "customize-cra": "^1.0.0",
     "eslint-config-prettier": "^7.1.0",
-    "eslint-plugin-prettier": "^3.3.1"
+    "eslint-plugin-prettier": "^3.3.1",
+    "react-app-rewired": "^2.1.8"
   },
   "proxy": "http://localhost:3001"
 }

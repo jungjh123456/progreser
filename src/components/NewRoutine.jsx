@@ -5,10 +5,10 @@ import { Form, Input, Checkbox, Switch, Select, TimePicker } from 'antd';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import date from 'date-and-time';
 
-const NewRoutine = ({ onRoutine, history }) => {
+const NewRoutine = ({ onRoutine, history, addMobRoutine }) => {
   const form = useRef();
   const audio = useRef();
-
+  console.log(addMobRoutine);
   const [alarm, setAlarm] = useState('');
 
   let message = '1번 울리기';
@@ -49,9 +49,9 @@ const NewRoutine = ({ onRoutine, history }) => {
         startTime: date.format(getValues.startTime._d, 'hh:mm'),
         endTime: date.format(getValues.endTime._d, 'hh:mm'),
       };
-      onRoutine(getValues);
+      addMobRoutine(getValues);
     },
-    [onRoutine],
+    [addMobRoutine],
   );
   const cancelBtn = () => {
     history.push('/');
